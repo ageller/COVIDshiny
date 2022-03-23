@@ -5,5 +5,5 @@ to run :
 ```
 $ r
 > library(shiny)
-> runApp()
+> runGitHub("COVIDshiny","ageller")
 ```
