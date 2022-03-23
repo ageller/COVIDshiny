@@ -8,4 +8,4 @@ $ r
 > runGitHub("COVIDshiny","ageller")
 ```
 
-A live version with data through March 23, 2022 is available on [here](https://ageller.shinyapps.io/covidshiny/).
+A live version with data through March 23, 2022 is available [here](https://ageller.shinyapps.io/covidshiny/).
