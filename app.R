@@ -93,7 +93,7 @@ generate_plot <- function(country, column, rollingWindow){
 				x=Date_reported, 
 				y=get(column), 
 				group=1,
-				text=sprintf("Date: %s\n Count %.0f", Date_reported,get(column))
+				text=sprintf("Date: %s\n Count: %.0f", Date_reported,get(column))
 			),
 		) +
 		geom_line() + geom_area(alpha=0.5) + 
