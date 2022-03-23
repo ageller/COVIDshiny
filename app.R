@@ -2,8 +2,11 @@ library(shiny)
 library(zoo)
 library(plotly)
 
-# read in data and clean up the dates
-df = read.csv('https://covid19.who.int/WHO-COVID-19-global-data.csv')
+# read in data
+# I can't figure out how to read from URL for for deploying on shinyapps.io, so I downloaded the data.
+#df = read.csv("data/WHO-COVID-19-global-data.csv")
+df = read.csv("https://covid19.who.int/WHO-COVID-19-global-data.csv")
+
 #clean up the date column 
 names(df)[names(df) == "ï..Date_reported"] = "Date_reported" #rename (not sure why the name comes through like this!)
 df$Date_reported = as.Date(df$Date_reported) #format as date
