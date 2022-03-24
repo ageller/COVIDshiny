@@ -70,10 +70,7 @@ server <- function(input, output) {
 		debugging()
 	})
 
-
-
-	# Generate a plot of the requested variable against mpg 
-	# and only exclude outliers if requested
+	# Generate the plot 
 	output$COVIDplot <- renderPlotly(
 		generate_plot(input$country, input$column, input$rollingWindow)
 	)
