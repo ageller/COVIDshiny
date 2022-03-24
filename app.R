@@ -59,7 +59,7 @@ ui <- fluidPage(
 
 
 
-# Define server logic to plot various variables against mpg 
+# Define server logic 
 server <- function(input, output) {
 	# for debuggin 
 	debugging <- reactive({
