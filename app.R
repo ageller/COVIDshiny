@@ -1,16 +1,11 @@
 library(shiny)
 library(zoo)
 library(plotly)
-library(httr)
 library(readr)
 
 # read in data
-# The code below works locally but not on shinyapps.io
-#df = read.csv("https://covid19.who.int/WHO-COVID-19-global-data.csv")
-
-# This works both locally adn on shinyapps.io
-response <- httr::GET("https://covid19.who.int/WHO-COVID-19-global-data.csv")
-df <- content(response)
+# Note: in order to deploy on shinyapps.io, you need to use read_csv, not read.csv (!)
+df <- read_csv("https://covid19.who.int/WHO-COVID-19-global-data.csv")
 
 #clean up the date column 
 names(df)[names(df) == "ï..Date_reported"] = "Date_reported" #rename (not sure why the name comes through like this!)
